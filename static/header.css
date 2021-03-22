@@ -1,0 +1,29 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 46px;
+    background-color: lightsteelblue;
+    text-align: center;
+}
+
+.login-bar {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    max-height: 42px;
+}
+
+.login-field {
+    position: absolute;
+    top: 0;
+    right: 136px;
+    width: max-content;
+    text-align: right;
+}
+
+.login-button {
+    width: 64px;
+    height: 42px;
+}
