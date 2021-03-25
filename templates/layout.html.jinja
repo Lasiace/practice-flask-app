@@ -2,25 +2,13 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     {% block head %}
     <title>Default Page</title>
     {% endblock %}
 </head>
 <body>
-    <div id="header" class="header">
-        <div id="login-bar" class="login-bar">
-            <div class="login-field">
-                <label for="username">Username</label>
-                <input id="username" type="text">
-                <br>
-                <label for="password">Password</label>
-                <input id="password" type="password">
-            </div>
-            <button class="login-button">Login</button>
-            <button class="login-button">Sign Up</button>
-        </div>
-    </div>
+    {% include "header.html.jinja" %}
     <div id="content" class="content">
         {% block content %}
         Content Placeholder
@@ -30,3 +18,4 @@
         Ayy Lmao
     </div>
 </body>
+

@@ -1,0 +1,49 @@
+div.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: lightsteelblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.right_header_bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 2px;
+    margin-right: 2px;
+    width: max-content;
+    max-height: 38px;
+    display: flex;
+    flex-direction: row;
+}
+
+button.header_button, input.header_button {
+    width: 64px;
+    height: 36px;
+}
+
+form.login-form {
+    display: flex;
+    flex-direction: row;
+}
+
+div.login-input-fields {
+    width: max-content;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: right;
+}
+
+label.login-checkbox-label {
+    font-size: 11px;
+}
+
+input.login-checkbox {
+    height: 12px;
+    margin: 0;
+    vertical-align: middle;
+}
