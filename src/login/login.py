@@ -14,15 +14,17 @@ login_manager = LoginManager()
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.find_user(user_id)
+    user_info = DB.find_user_info(user_id = user_id)
+    return User(user_info['id'], user_info['name'])
 
 def validateUser(username, password):
-    return username == 'dummy' and password == 'pw'
+    return DB.check_user_pw(username, password)
 
 @login_blueprint.route('/login', methods=["GET", "POST"])
 def login():
     if validateUser(request.form["username"], request.form["password"]):
-        user = User(request.form["username"])
+        user_info = DB.find_user_info(username = request.form["username"])
+        user = User(user_info['id'], user_info['name'])
         login_user(user)
 
         return redirect_on_complete(request.args.get("on_complete"))

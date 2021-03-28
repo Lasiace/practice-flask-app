@@ -128,6 +128,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# VS Code
+.vscode
+
 # SSL certificate and other security files
 *.pem
 .secret_key
+
+# SQLite Database
+*.db

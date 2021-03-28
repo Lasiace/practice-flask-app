@@ -1,18 +1,15 @@
 from flask_login import UserMixin
 
 class User(UserMixin):
-    @staticmethod
-    def find_user(user_id):
-        return User('dummy')
-
-    def __init__(self, username):
+    def __init__(self, user_id, username):
+        self.user_id = user_id
         self.username = username
 
     def get_name(self):
         return self.username
 
     def get_id(self):
-        return chr(1)
+        return self.user_id
 
     def is_authenticated(self):
         return True
